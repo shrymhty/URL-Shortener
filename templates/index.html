@@ -4,12 +4,66 @@
         <meta charset="UTF-8">
         <title>URL Shortener</title>
         <style>
-            body {
+             body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 height: 100vh;
                 margin: 0;
+                font-family: 'Arial', sans-serif;
+            }
+
+            h1, h2 {
+                margin: 10px 0;
+            }
+
+            form {
+                width: 100%;
+                max-width: 1500px; /* Adjust the max-width as needed */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            input {
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            button {
+                position : relative ;
+                z-index : 0 ;
+                width : 240px ;
+                height : 56px ;
+                text-decoration : none ;
+                font-size : 14px ; 
+                font-weight : bold ;
+                color : var(--line_color) ;
+                letter-spacing : 2px ;
+                transition : all .3s ease ;
+                border-radius: 60px;
+            }
+            
+
+            button:hover {
+                background-color: plum; /* Adjust the hover color as needed */
+            }
+
+            p {
+                margin: 10px 0;
+            }
+
+            a {
+                color: #007BFF; /* Adjust the link color as needed */
+                text-decoration: none;
+            }
+
+            button.copy-button {
+                margin-top: 10px;
             }
         </style>
     </head>
