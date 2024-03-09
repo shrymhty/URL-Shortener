@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>URL Shortener</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>SnipLink</h1>
+        <h2>A URL Shortening tool for all</h2>
+        <form method="POST" action="{{ url_for('index') }}">
+            <input type="text" name="long_url" placeholder="Enter the long url">
+            <button type="submit">Shorten</button>
+        </form>
+
+        {% if short_url %}
+            <p>Shortened URL: <a href="{{ url_for('redirect_url', short_url=short_url) }}" target="_blank">{{ url_for('redirect_url', short_url=short_url) }}</a></p>
+            <button onclick="copytoClipboard()">Copy Link 🔗</button>
+        {% endif %}
+    </body>
+</html>
